@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a patient</title>
+</head>
+<body>
+<h1>Add a new patient</h1>
+<form action="#" th:action="@{/patients/addPatient}" th:object="${patient}" method="post">
+    <label for="firstName">First name:</label>
+    <input type="text" id="firstName" name="firstName" th:field="*{firstName}" required><br>
+
+    <label for="lastName">Last name:</label>
+    <input type="text" id="lastName" name="lastName" th:field="*{lastName}" required><br>
+
+    <label for="dateOfBirth">Date of birth:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" th:field="*{dateOfBirth}" /><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" th:field="*{address}" required><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" th:field="*{email}" required><br>
+
+    <label for="phoneNumber">Phone number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" th:field="*{phoneNumber}" required><br>
+
+    <button type="submit">Add</button>
+</form>
+</body>
+</html>
